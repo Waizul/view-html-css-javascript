@@ -144,11 +144,14 @@ header {
 }
 .movie-list-wrapper {
 	position: relative;
+	overflow: hidden;
 }
 .movie-list {
 	display: flex;
 	gap: 30px;
 	width: 300px;
+	transform: translateX(0);
+	transition: all 1s ease-in-out;
 }
 .movie-list-item {
 	position: relative;
@@ -157,6 +160,7 @@ header {
 	width: 270px;
 	height: 200px;
 	object-fit: cover;
+	border-radius: 20px;
 	transition: all 1s ease-in-out;
 }
 .movie-list-item:hover .movie-list-item-img {
@@ -172,7 +176,7 @@ header {
 	font-weight: bold;
 	position: absolute;
 	top: 10%;
-	left: 50px;
+	left: 30px;
 	opacity: 0;
 	transition: all 1s ease-in-out;
 }
@@ -180,9 +184,9 @@ header {
 	color: white;
 	background-color: #333;
 	padding: 10px;
-	width: 200px;
+	width: 220px;
 	position: absolute;
-	top: 30%;
+	top: 25%;
 	left: 30px;
 	opacity: 0;
 	transition: all 1s ease-in-out;
@@ -198,7 +202,7 @@ header {
 	font-size: 20px;
 	cursor: pointer;
 	position: absolute;
-	bottom: 0;
+	bottom: 16px;
 	left: 30px;
 	opacity: 0;
 	transition: all 1.5s ease-in-out;
