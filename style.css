@@ -61,7 +61,7 @@ header {
 }
 .toggle {
 	width: 50px;
-	height: 20px;
+	height: 23px;
 	background-color: white;
 	border-radius: 30px;
 	display: flex;
@@ -81,6 +81,7 @@ header {
 	position: absolute;
 	right: 1px;
 	cursor: pointer;
+	transition: 0.5s ease all;
 }
 
 .sidebar {
@@ -219,4 +220,31 @@ header {
 	top: 26%;
 	right: 0;
 	opacity: 0.5;
+}
+
+.container.active {
+	background-color: white;
+}
+.movie-list-title.active {
+	color: black;
+}
+.navbar.active {
+	background-color: white;
+	color: black;
+}
+.sidebar.active {
+	background-color: white;
+}
+.side-menu-icon.active {
+	color: black;
+}
+.toggle.active {
+	background-color: black;
+}
+.toggle-ball.active {
+	background-color: white;
+	transform: translate(-22px);
+}
+.fa-sun {
+	color: white;
 }
