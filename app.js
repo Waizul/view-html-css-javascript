@@ -8,7 +8,8 @@ arrows.forEach((arrow, i) => {
 	let clickCounter = 0;
 	arrow.addEventListener('click', () => {
 		clickCounter++;
-		if (itemNumber - (5 + clickCounter) >= 0) {
+		const ratio = Math.floor(window.innerWidth / 300);
+		if (itemNumber - (5 + clickCounter - (5 - ratio)) >= 0) {
 			movieLists[i].style.transform = `translateX(${
 				movieLists[i].computedStyleMap().get('transform')[0].x.value -
 				300
@@ -18,7 +19,6 @@ arrows.forEach((arrow, i) => {
 			clickCounter = 0;
 		}
 	});
-	console.log(movieLists[i].querySelectorAll('img').length);
 });
 
 const ball = document.querySelector('.toggle-ball');
